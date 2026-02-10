@@ -21,6 +21,10 @@ const contacts = [
         label: "📜 Sijil & Kelayakan",
         href: "/cert",
         color: "bg-gray-800 hover:bg-gray-900",
+    }, {
+        label: "📅 Bayaran",
+        href: "/bayaran",
+        color: "bg-orange-500 hover:bg-orange-600",
     },
 ];
 
