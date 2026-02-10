@@ -1,0 +1,73 @@
+"use client"
+
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
+
+const contacts = [
+    {
+        label: "📱 WhatsApp",
+        href: "https://wa.me/60123456789",
+        color: "bg-green-500 hover:bg-green-600",
+        external: true,
+    },
+    {
+        label: "✈️ Telegram",
+        href: "https://t.me/username",
+        color: "bg-sky-500 hover:bg-sky-600",
+        external: true,
+    },
+    {
+        label: "📜 Sijil & Kelayakan",
+        href: "/cert.pdf",
+        color: "bg-gray-800 hover:bg-gray-900",
+    },
+];
+
+export default function AdikMengajiPage() {
+    return (
+        <main className="min-h-screen bg-gradient-to-b from-emerald-50 to-white flex items-center justify-center p-6">
+            <section className="w-full max-w-md bg-white shadow-xl rounded-3xl p-8 space-y-6 text-center">
+
+                {/* Header */}
+                <header className="space-y-2">
+                    <h1 className="text-2xl font-bold text-emerald-700">
+                        Kelas Mengaji Al-Quran
+                    </h1>
+
+                    <p className="text-gray-500 text-sm">Ustazah Aina</p>
+
+                    <p className="text-gray-400 text-xs">
+                        Tajwid • Asas • Dewasa & Kanak-kanak
+                    </p>
+                </header>
+
+                {/* Dynamic Buttons */}
+                <div className="space-y-4 pt-4">
+                    {contacts.map((item) => (
+                        <Button
+                            key={item.label}
+                            asChild
+                            className={item.color}
+                        >
+                            <Link
+                                href={item.href}
+                                target={item.external ? "_blank" : undefined}
+                                rel={item.external ? "noopener noreferrer" : undefined}
+                            >
+                                {item.label}
+                            </Link>
+                        </Button>
+                    ))}
+                </div>
+
+                {/* Footer */}
+                <footer className="text-xs text-gray-400 pt-4 border-t">
+                    📍 Seremban <br />
+                    ⏰ Isnin – Jumaat | 8pm – 10pm
+                </footer>
+
+            </section>
+        </main>
+    );
+}
