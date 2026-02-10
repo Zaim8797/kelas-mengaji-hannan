@@ -3,17 +3,17 @@ import Link from "next/link";
 
 const certs = [
     {
-        src: "/certs/cert1.jpg",
+        src: "/assets/certs/cert1.jpg",
         title: "Sijil Talaqqi Al-Quran",
         desc: "Pengajian talaqqi bersama guru bertauliah sehingga khatam 30 juzuk.",
     },
     {
-        src: "/certs/cert2.jpg",
+        src: "/assets/certs/cert2.jpg",
         title: "Sijil Tajwid",
         desc: "Penguasaan hukum tajwid dan makhraj huruf secara bertalaqqi.",
     },
     {
-        src: "/certs/cert3.jpg",
+        src: "/assets/certs/cert3.jpg",
         title: "Pengalaman Mengajar",
         desc: "Berpengalaman mengajar kelas kanak-kanak & dewasa secara berkumpulan dan personal.",
     },
