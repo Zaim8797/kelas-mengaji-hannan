@@ -7,19 +7,19 @@ import Link from "next/link";
 const contacts = [
     {
         label: "📱 WhatsApp",
-        href: "https://wa.me/60123456789",
+        href: "https://wa.me/601126160844",
         color: "bg-green-500 hover:bg-green-600",
         external: true,
     },
     {
         label: "✈️ Telegram",
-        href: "https://t.me/username",
+        href: "https://t.me/hannanadhir4h",
         color: "bg-sky-500 hover:bg-sky-600",
         external: true,
     },
     {
         label: "📜 Sijil & Kelayakan",
-        href: "/cert.pdf",
+        href: "/cert",
         color: "bg-gray-800 hover:bg-gray-900",
     },
 ];
@@ -35,25 +35,26 @@ export default function AdikMengajiPage() {
                         Kelas Mengaji Al-Quran
                     </h1>
 
-                    <p className="text-gray-500 text-sm">Ustazah Aina</p>
+                    <p className="text-gray-500 text-sm">Ustazah Hannan</p>
 
                     <p className="text-gray-400 text-xs">
-                        Tajwid • Asas • Dewasa & Kanak-kanak
+                        Belajar mengaji dengan lancar bersama bimbingan peribadi
                     </p>
                 </header>
 
                 {/* Dynamic Buttons */}
-                <div className="space-y-4 pt-4">
+                <div className="flex flex-col gap-4 pt-4">
                     {contacts.map((item) => (
                         <Button
                             key={item.label}
                             asChild
-                            className={item.color}
+                            className={`w-full ${item.color}`}
                         >
                             <Link
                                 href={item.href}
                                 target={item.external ? "_blank" : undefined}
                                 rel={item.external ? "noopener noreferrer" : undefined}
+                                className="w-full"
                             >
                                 {item.label}
                             </Link>
@@ -63,7 +64,7 @@ export default function AdikMengajiPage() {
 
                 {/* Footer */}
                 <footer className="text-xs text-gray-400 pt-4 border-t">
-                    📍 Seremban <br />
+                    📍 Google Meet <br />
                     ⏰ Isnin – Jumaat | 8pm – 10pm
                 </footer>
 
