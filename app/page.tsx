@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import domtoimage from "dom-to-image-more";
+
 
 export default function PosterPage() {
   const posterRef = useRef<HTMLDivElement>(null);
@@ -10,6 +10,7 @@ export default function PosterPage() {
     if (!posterRef.current) return;
 
     try {
+      const domtoimage = (await import("dom-to-image-more")).default;
       const dataUrl = await domtoimage.toPng(posterRef.current, {
         quality: 1,
         width: posterRef.current.offsetWidth * 2,
@@ -36,6 +37,7 @@ export default function PosterPage() {
     if (!posterRef.current) return;
 
     try {
+      const domtoimage = (await import("dom-to-image-more")).default;
       const blob = await domtoimage.toBlob(posterRef.current, {
         quality: 1,
         width: posterRef.current.offsetWidth * 2,
@@ -68,6 +70,7 @@ export default function PosterPage() {
         }
       } else {
         // Fallback: Download instead
+        const domtoimage = (await import("dom-to-image-more")).default;
         const dataUrl = await domtoimage.toPng(posterRef.current);
         const link = document.createElement("a");
         link.href = dataUrl;
