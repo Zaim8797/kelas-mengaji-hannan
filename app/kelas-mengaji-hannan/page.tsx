@@ -17,11 +17,11 @@ const contacts = [
         color: "bg-sky-500 hover:bg-sky-600",
         external: true,
     },
-    {
-        label: "📜 Sijil & Kelayakan",
-        href: "/cert",
-        color: "bg-gray-800 hover:bg-gray-900",
-    },
+    // {
+    //     label: "📜 Sijil & Kelayakan",
+    //     href: "/cert",
+    //     color: "bg-gray-800 hover:bg-gray-900",
+    // },
     // {
     //     label: "📅 Bayaran",
     //     href: "/bayaran",
